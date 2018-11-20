@@ -83,7 +83,7 @@ abstract class GMFabricServer extends App {
     rest match {
       case Some(_) =>
         log.ifDebug("creating restful server.")
-        restServer = Option(new GMFabricRestServer(rest.get.filters, rest.get.controllers))
+        restServer = Option(new GMFabricRestServer(rest.get.filters, rest.get.controllers, rest.get.modules))
         if (announceAdmin) {
           GMFAnnouncer.announce(GMFNetworkConfigurationResolver.getAnnounceAdminPort,"admin")
         }

@@ -20,14 +20,16 @@ package com.deciphernow.server
 import com.twitter.finagle.Filter
 import com.twitter.finagle.http.{Request => FinagleRequest, Response => FinagleResponse}
 import com.twitter.finatra.http.Controller
+import com.twitter.inject.TwitterModule
 
 /**
   *
   * @param filters
   * @param controllers
+  * @param modules
   */
-case class RestServer(filters: Seq[Filter[FinagleRequest, FinagleResponse,FinagleRequest, FinagleResponse]],controllers: Seq[Controller]) {
-  def this(controllers: Seq[Controller]) = this(Nil,controllers)
-  def this(filters: Seq[Filter[FinagleRequest, FinagleResponse,FinagleRequest, FinagleResponse]],controller: Controller) = this(filters,controller :: Nil)
+case class RestServer(filters: Seq[Filter[FinagleRequest, FinagleResponse,FinagleRequest, FinagleResponse]],controllers: Seq[Controller], modules: Seq[TwitterModule] = Nil) {
+  def this(controllers: Seq[Controller]) = this(Nil,controllers, Nil)
+  def this(filters: Seq[Filter[FinagleRequest, FinagleResponse,FinagleRequest, FinagleResponse]],controller: Controller) = this(filters,controller :: Nil, Nil)
   def this(controller: Controller) = this(controller :: Nil)
 }

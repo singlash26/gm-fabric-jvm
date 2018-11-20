@@ -26,6 +26,7 @@ import com.twitter.finagle.{Filter, Http}
 import com.twitter.finatra.http.filters.{AccessLoggingFilter, ExceptionMappingFilter, StatsFilter}
 import com.twitter.finatra.http.routing.HttpRouter
 import com.twitter.finatra.http.{Controller, HttpServer}
+import com.twitter.inject.TwitterModule
 import com.twitter.logging.Logger
 import com.twitter.util.StorageUnit
 
@@ -38,7 +39,8 @@ import com.twitter.util.StorageUnit
   * @param filters
   * @param controllers
   */
-class GMFabricRestServer(filters: Seq[Filter[FinagleRequest, FinagleResponse,FinagleRequest, FinagleResponse]], controllers: Seq[Controller])
+class GMFabricRestServer(filters: Seq[Filter[FinagleRequest, FinagleResponse,FinagleRequest, FinagleResponse]], controllers: Seq[Controller],
+                         customModules: Seq[TwitterModule])
   extends HttpServer {
 
   lazy override val log = Logger.get(getClass)
@@ -125,6 +127,8 @@ class GMFabricRestServer(filters: Seq[Filter[FinagleRequest, FinagleResponse,Fin
     ))
   }
 
+  override val modules = customModules
+
   /**
     *
     * @param router
@@ -169,8 +173,10 @@ class GMFabricRestServer(filters: Seq[Filter[FinagleRequest, FinagleResponse,Fin
       log.ifInfo("There are no controllers to add to the router thus no capabilities for this service.")
     }
 
-    router.exceptionMapper[FailFastExceptionMapper]
-    router.exceptionMapper[IndividualRequestTimeoutExceptionMapper]
+    if(modules==Nil) {
+      router.exceptionMapper[FailFastExceptionMapper]
+      router.exceptionMapper[IndividualRequestTimeoutExceptionMapper]
+    }
   }
 
   lazy val decrypter : Decryptor = DecryptorManager.getInstance
