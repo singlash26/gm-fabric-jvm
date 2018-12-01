@@ -19,8 +19,10 @@ This filter is the gatekeeper in allowing services to access the service through
 
 Add:
 
-    ####Enable ACL
-    -acl.whitelist.file=etc/accessControlList.txt      
+#### Enable ACL
+
+    -com.deciphernow.server.config.acl.whitelist.file=etc/whitelist.txt      
+
 
 Update the service class to enable ACL. This example below enables the AclRestFilter to enforce ACL at REST. See [AclRestFilter](AclRestFilter.md) documentation to understand what it is doing.
 
@@ -49,9 +51,10 @@ Update the service class to enable ACL. This example below enables the AclRestFi
         // When using impersonating security filters, we need an access manager
         var accessManager: FileWhitelistImpersonationAccessManager = _
       
-        // The access manager will require a whitelist file.  This is one way to use configuration for the file path
-        val whitelistFile = flag[File]("acl.whitelist.file", "ACL whitelist file for user impersonation")
-      
+        // The access manager will require a whitelist file.  This is one way to use configuration for the file path.
+        // Old attribute is: "acl.whitelist.file"
+        val whitelistFile = flag[File]("com.deciphernow.server.config.acl.whitelist.file", "ACL whitelist file for user impersonation")
+        
         premain {
       
           accessManager = new FileWhitelistImpersonationAccessManager(

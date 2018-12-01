@@ -8,6 +8,9 @@ import java.io.File
 import ${package}.rest.${appName}RestController
 import ${package}.thrift.${appName}ThriftService
 
+// Uncomment if using Whitelist enforcement.
+//import com.deciphernow.server.security.FileWhitelistImpersonationAccessManager
+
 import com.deciphernow.server.{GMFabricServer, RestServer, ThriftServer}
 import com.deciphernow.server.Implicits._
 
@@ -26,8 +29,9 @@ object ${appName} extends GMFabricServer {
   // When using impersonating security filters, we need an access manager
   //var accessManager: FileWhitelistImpersonationAccessManager = _
 
-  // The access manager will require a whitelist file.  This is one way to use configuration for the file path
-  //val whitelistFile = flag[File]("acl.whitelist.file", "ACL whitelist file for user impersonation")
+  // The access manager will require a whitelist file.  This is one way to use configuration for the file path.
+  // Old attribute is: "acl.whitelist.file"
+  //val whitelistFile = flag[File]("com.deciphernow.server.config.acl.whitelist.file", "ACL whitelist file for user impersonation")
 
   premain {
 

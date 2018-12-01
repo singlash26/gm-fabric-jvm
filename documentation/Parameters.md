@@ -4,6 +4,10 @@ The following parameters can be configured in the `etc/parameters.config` file. 
 ## White-list Enforcement File
 This points to the file that identifies the services that are allowed to access and perform impersonation.
 
+    -com.deciphernow.server.config.acl.whitelist.file=etc/whitelist.txt
+    
+Old ACL Whitelist attribute
+    
     -acl.whitelist.file=etc/whitelist.txt
     
 ## Increase the Size of Netty client worker pool

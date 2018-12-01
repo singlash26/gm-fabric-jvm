@@ -38,8 +38,10 @@ import com.twitter.util.StorageUnit
   *
   * @param filters
   * @param controllers
+  * @param customModules
   */
-class GMFabricRestServer(filters: Seq[Filter[FinagleRequest, FinagleResponse,FinagleRequest, FinagleResponse]], controllers: Seq[Controller],
+class GMFabricRestServer(filters: Seq[Filter[FinagleRequest, FinagleResponse,FinagleRequest, FinagleResponse]],
+                         controllers: Seq[Controller],
                          customModules: Seq[TwitterModule])
   extends HttpServer {
 
