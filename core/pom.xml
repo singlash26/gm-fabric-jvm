@@ -19,7 +19,7 @@
     <parent>
         <groupId>com.deciphernow</groupId>
         <artifactId>gm-fabric</artifactId>
-        <version>0.2.8-SNAPSHOT</version>
+        <version>0.2.8</version>
     </parent>
 
     <groupId>com.deciphernow</groupId>

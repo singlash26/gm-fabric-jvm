@@ -1,9 +1,19 @@
 
 # Release Notes
 
-## 0.2.8-SNAPSHOT
+## gm-fabric-jvm-0.2.8
 
-- TBD
+### Issue 171
+
+Update documentation on how to add a custom ExceptionMapper.
+
+### Issue 169
+
+Ability to register custome ExceptionMapper to HttpRouter
+
+### Issue 157
+
+Align acl config attribute with all other attributes.
 
 ## gm-fabric-jvm-0.2.7
 

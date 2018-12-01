@@ -7,7 +7,7 @@ This document is a live example of roughly what you will see when you generate y
 
 The following command will create your microservice.
 
-    $ mvn archetype:generate -DarchetypeGroupId=com.deciphernow -DarchetypeArtifactId=gm-fabric-archetype -DarchetypeVersion=0.2.7
+    $ mvn archetype:generate -DarchetypeGroupId=com.deciphernow -DarchetypeArtifactId=gm-fabric-archetype -DarchetypeVersion=0.2.8
     
 ### Captured output
 
@@ -34,17 +34,17 @@ The following output is close to what to expect when you generate your microserv
     [INFO] Using property: version = 0.1.0-SNAPSHOT
     Define value for property 'package' com.acme: : 
     Define value for property 'appName': MyFirstMicroservice
-    [INFO] Using property: serviceFrameworkVersion = 0.2.7
+    [INFO] Using property: serviceFrameworkVersion = 0.2.8
     Confirm properties configuration:
     groupId: com.acme
     artifactId: myfirstmicroservice
     version: 0.1.0-SNAPSHOT
     package: com.acme
     appName: MyFirstMicroservice
-    serviceFrameworkVersion: 0.2.7
+    serviceFrameworkVersion: 0.2.8
      Y: : 
     [INFO] ----------------------------------------------------------------------------
-    [INFO] Using following parameters for creating project from Archetype: gm-fabric-archetype:0.2.7
+    [INFO] Using following parameters for creating project from Archetype: gm-fabric-archetype:0.2.8
     [INFO] ----------------------------------------------------------------------------
     [INFO] Parameter: groupId, Value: com.acme
     [INFO] Parameter: artifactId, Value: myfirstmicroservice
@@ -52,7 +52,7 @@ The following output is close to what to expect when you generate your microserv
     [INFO] Parameter: package, Value: com.acme
     [INFO] Parameter: packageInPathFormat, Value: com/acme
     [INFO] Parameter: appName, Value: MyFirstMicroservice
-    [INFO] Parameter: serviceFrameworkVersion, Value: 0.2.7
+    [INFO] Parameter: serviceFrameworkVersion, Value: 0.2.8
     [INFO] Parameter: package, Value: com.acme
     [INFO] Parameter: version, Value: 0.1.0-SNAPSHOT
     [INFO] Parameter: groupId, Value: com.acme
@@ -797,7 +797,7 @@ Time to compile our microservice.
     [INFO] Copying net-util-0.0.102.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/net-util-0.0.102.jar
     [INFO] Copying io-0.0.68.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/io-0.0.68.jar
     [INFO] Copying util-function_2.11-6.41.0.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/util-function_2.11-6.41.0.jar
-    [INFO] Copying gm-fabric-core-0.2.7.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/gm-fabric-core-0.2.7.jar
+    [INFO] Copying gm-fabric-core-0.2.8.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/gm-fabric-core-0.2.8.jar
     [INFO] Copying javax.inject-1.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/javax.inject-1.jar
     [INFO] Copying collections-0.0.110.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/collections-0.0.110.jar
     [INFO] Copying finagle-thrift_2.11-6.42.0.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/finagle-thrift_2.11-6.42.0.jar
@@ -860,7 +860,7 @@ Time to compile our microservice.
     [INFO] Copying util-collection_2.11-6.41.0.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/util-collection_2.11-6.41.0.jar
     [INFO] Copying objenesis-1.0.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/objenesis-1.0.jar
     [INFO] Copying inject-modules_2.11-2.8.0.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/inject-modules_2.11-2.8.0.jar
-    [INFO] Copying gm-fabric-jvm-config-0.2.7.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/gm-fabric-jvm-config-0.2.7.jar
+    [INFO] Copying gm-fabric-jvm-config-0.2.8.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/gm-fabric-jvm-config-0.2.8.jar
     [INFO] Copying inject-server_2.11-2.8.0-tests.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/inject-server_2.11-2.8.0-tests.jar
     [INFO] Copying netty-codec-4.1.8.Final.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/netty-codec-4.1.8.Final.jar
     [INFO] Copying mockito-core-1.9.5.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/mockito-core-1.9.5.jar
@@ -896,7 +896,7 @@ Time to compile our microservice.
     [INFO] Copying util-registry_2.11-6.41.0.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/lib/util-registry_2.11-6.41.0.jar
     [INFO] 
     [INFO] --- appassembler-maven-plugin:1.10:generate-daemons (generate-jsw-scripts) @ myfirstmicroservice-server ---
-    [INFO] Installing artifact /home/developer/.m2/repository/com/deciphernow/gm-fabric-core/0.2.7/gm-fabric-core-0.2.7.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/gm-fabric-core-0.2.7.jar
+    [INFO] Installing artifact /home/developer/.m2/repository/com/deciphernow/gm-fabric-core/0.2.8/gm-fabric-core-0.2.8.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/gm-fabric-core-0.2.8.jar
     [INFO] Installing artifact /home/developer/.m2/repository/com/twitter/util-logging_2.11/6.41.0/util-logging_2.11-6.41.0.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/util-logging_2.11-6.41.0.jar
     [INFO] Installing artifact /home/developer/.m2/repository/com/twitter/finatra-thrift_2.11/2.8.0/finatra-thrift_2.11-2.8.0.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/finatra-thrift_2.11-2.8.0.jar
     [INFO] Installing artifact /home/developer/.m2/repository/com/typesafe/scala-logging/scala-logging-api_2.11/2.1.2/scala-logging-api_2.11-2.1.2.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/scala-logging-api_2.11-2.1.2.jar
@@ -906,7 +906,7 @@ Time to compile our microservice.
     [INFO] Installing artifact /home/developer/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/commons-logging-1.1.3.jar
     [INFO] Installing artifact /home/developer/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/commons-codec-1.6.jar
     [INFO] Installing artifact /home/developer/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/httpcore-4.3.2.jar
-    [INFO] Installing artifact /home/developer/.m2/repository/com/deciphernow/gm-fabric-jvm-config/0.2.7/gm-fabric-jvm-config-0.2.7.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/gm-fabric-jvm-config-0.2.7.jar
+    [INFO] Installing artifact /home/developer/.m2/repository/com/deciphernow/gm-fabric-jvm-config/0.2.8/gm-fabric-jvm-config-0.2.8.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/gm-fabric-jvm-config-0.2.8.jar
     [INFO] Installing artifact /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/model/target/myfirstmicroservice-model-0.1.0-SNAPSHOT.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/myfirstmicroservice-model-0.1.0-SNAPSHOT.jar
     [INFO] Installing artifact /home/developer/.m2/repository/com/twitter/scrooge-core_2.11/4.14.0/scrooge-core_2.11-4.14.0.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/scrooge-core_2.11-4.14.0.jar
     [INFO] Installing artifact /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/business/target/myfirstmicroservice-business-0.1.0-SNAPSHOT.jar to /media/developer/dev/projects/workspaces/git-spacess/deciphernow/testing/023/myfirstmicroservice/server/target/appassembler/jsw/myfirstmicroservice-server/lib/myfirstmicroservice-business-0.1.0-SNAPSHOT.jar
