@@ -69,6 +69,10 @@ Adding your own parameters and changing default behavior provided by the framewo
 - [Coding your own parameters.](documentation/Config.md)
 - [Provided parameters to change default behavior.](documentation/Parameters.md)
 
+#### Custom ExceptionMappers
+
+- [Adding you own ExceptionMappers](documentation/CustomExceptionMappers.md)
+
 #### Configuring metric plugins
 
 - [AWS: Capture metrics to be sent to AWS.](documentation/Cloudwatch-plugin.md)
